@@ -1,6 +1,6 @@
--- migrations/20250723012151_create_users/up.sql
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL UNIQUE,
-    email TEXT NOT NULL UNIQUE
+    password_hash TEXT NOT NULL,
+    role TEXT NOT NULL DEFAULT 'user'
 );
