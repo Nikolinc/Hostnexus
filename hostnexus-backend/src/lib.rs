@@ -2,7 +2,7 @@ use actix_web::{App, HttpServer, web};
 use crate::api::mod_api;
 use crate::db::init_db;
 
-
+pub mod models;
 pub mod api;
 pub mod db;
 pub mod auth;
